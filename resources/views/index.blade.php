@@ -14,7 +14,7 @@
                         @csrf
                         <h1></h1>
                         <h2>Sign in </h2>
-                        <input type="text" name="fullname" class="uname" placeholder="Enter your name" required/>
+                        <input type="text" name="fullname" class="uname" placeholder="Enter your name"/>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
 
