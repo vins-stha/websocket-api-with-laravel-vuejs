@@ -88,7 +88,7 @@
                             </thead>
                             <tbody>
                             @if($user['gameCount'] > 0)
-                            $count = 0;
+                            @$count = 0
                                 @foreach($user['gamesPlayed'] as $game)
 
                                     <tr>
