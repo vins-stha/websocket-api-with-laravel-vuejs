@@ -88,10 +88,11 @@
                             </thead>
                             <tbody>
                             @if($user['gameCount'] > 0)
+                            $count = 0;
                                 @foreach($user['gamesPlayed'] as $game)
 
                                     <tr>
-                                        <td>{{$game['gameId']}}</td>
+                                        <td>{{++$count}}</td>
                                         <td>{{$user['name']}}</td>
                                         <td>{{$game['with']}}</td>
                                         <td>{{$game['against']}}</td>
