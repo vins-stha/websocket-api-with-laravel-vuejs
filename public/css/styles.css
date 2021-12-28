@@ -1,0 +1,253 @@
+html, body {   background-color: #5a6268;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+    background: #14BF01;
+    background: -webkit-linear-gradient(top left, #14BF01, #172AF1);
+    background: -moz-linear-gradient(top left, #14BF01, #172AF1);
+    background: linear-gradient(to bottom right, #14BF01, #172AF1);
+}
+
+.full-height {
+    height: 100vh;
+}
+
+
+li {
+    list-style: none;
+    margin-left: 5rem;
+    color: wheat;
+    padding: 0.25rem;
+
+}
+
+a a:visited {
+    text-decoration: none;
+    padding: 0.2rem;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    border: 1px solid red;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+/**nav bar */
+.navbar {
+    width: 100%;
+    height: 10%;
+    background-color: #2d314d;
+    display: flex;
+    align-content: space-between;
+    text-align: center;
+}
+
+.nav-logo {
+    color: aquamarine;
+    font-weight: 700;
+    font-size: 3rem;
+    justify-content: center;
+    margin-left: 5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color:bisque;
+    margin-right: 1rem;
+}
+
+.login {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid red;
+    padding: 2rem;
+    background-color: #cecece;
+    color: black;
+    flex-direction: column;
+}
+
+input {
+    border: none;
+    padding: 0.25rem;
+    height: 2rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+    margin: 0 1rem 1rem 0;
+
+}
+
+
+/**user stats containers*/
+.statsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+.mainStat {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.secondary {
+    display: flex;
+    flex-direction: row;
+    min-width: 90%;
+    padding: 1rem;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+.newGame {
+    width: 100%;
+    border: 1px solid black;
+    background-color: #5a6268;
+    padding: 1rem;
+    color: #FFF;
+    overflow-y: scroll;
+    max-height: 20rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+}
+
+.table-dark {
+    font-size: 0.8rem;
+}
+.head {
+    color: bisque;
+}
+
+/***live stats containers**/
+
+.section-heading {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.small {
+    max-width: 5rem;
+    height: 2rem !important;
+    font-size: 0.8rem;
+}
+
+.gameId {
+    font-size: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 1rem;
+
+}
+.sm {
+    font-size: 0.8rem;
+    color: bisque;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    input {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    .nav-logo {
+        font-size: 2.5rem;
+    }
+    .content {
+        justify-content: center;
+        border: none;
+        width: 50%;
+    }
+
+}
+@media screen and (max-width: 512px){
+    .content {
+        width: 60%;
+    }
+    input {
+        width: 80%;
+        font-size: 0.7rem;
+    }
+    .nav-logo {
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+    .navbar {
+        padding-bottom: 4.5rem;
+    }
+    .menu {
+        margin-left: 3rem;
+    }
+    .statsContainer {
+        margin-left: 0.7rem;
+        padding: 0;
+    }
+    .mainStat{
+        flex-direction: column;
+    }
+    .newGame {
+        margin: 1rem 0 0 0.5rem;
+        padding: 0.3rem;
+        overflow: scroll;
+    }
+    .table-dark {
+        font-size: 0.65rem;
+    }
+    .secondary {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .head {
+        font-size: medium;
+    }
+    .sm {
+        font-size: 0.8rem;
+        color: bisque;
+        margin-right: 1rem;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
