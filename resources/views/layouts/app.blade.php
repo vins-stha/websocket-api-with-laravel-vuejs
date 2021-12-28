@@ -14,6 +14,8 @@
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
     <link rel="stylesheet" href="{{asset('css/styles.css')}}"></link>
+    <link rel="stylesheet" href="{{ secure_asset('css/styles.css') }}">
+
 
 
 </head>
