@@ -79,7 +79,7 @@
                     <div class="games" style="font-size: 10px">
                         <table class="table table-dark table-striped">
                             <thead>
-                            <th scope="col">Game id:</th>
+                           
                             <th scope="col">Player A</th>
                             <th scope="col">Player B</th>
                             <th scope="col">Against</th>
@@ -88,11 +88,10 @@
                             </thead>
                             <tbody>
                             @if($user['gameCount'] > 0)
-                            @$count = 0
+                          
                                 @foreach($user['gamesPlayed'] as $game)
 
                                     <tr>
-                                        <td>{{++$count}}</td>
                                         <td>{{$user['name']}}</td>
                                         <td>{{$game['with']}}</td>
                                         <td>{{$game['against']}}</td>
