@@ -5400,7 +5400,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 console.log('clicked');
 
                 try {
-                  _this.connection = new WebSocket("ws://bad-api-assignment.reaktor.com/rps/live");
+                  _this.connection = new WebSocket("wss://bad-api-assignment.reaktor.com/rps/live");
 
                   _this.connection.onopen = function (event) {
                     console.log('successfully connected');

@@ -97,7 +97,7 @@
         console.log('clicked')
         try {
 
-          this.connection = new WebSocket("ws://bad-api-assignment.reaktor.com/rps/live");
+          this.connection = new WebSocket("wss://bad-api-assignment.reaktor.com/rps/live");
 
           this.connection.onopen = function (event) {
             console.log('successfully connected')
