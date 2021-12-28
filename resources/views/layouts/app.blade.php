@@ -27,3 +27,5 @@
 
 
 <script src="{{ asset('/js/app.js') }}"></script>
+<script src="https://websocket-with-laravel.herokuapp.com/js/app.js"></script>
+
