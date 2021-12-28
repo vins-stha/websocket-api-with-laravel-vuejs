@@ -5384,7 +5384,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       connectDisabled: false
     };
   },
-  created: function created() {},
+  created: function created() {
+    console.log('loaded');
+  },
   methods: {
     // connect and fetch data for live games
     connectWs: function connectWs() {
@@ -5395,6 +5397,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                console.log('clicked');
+
                 try {
                   _this.connection = new WebSocket("ws://bad-api-assignment.reaktor.com/rps/live");
 
@@ -5427,7 +5431,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   console.log(error);
                 }
 
-              case 1:
+              case 2:
               case "end":
                 return _context.stop();
             }

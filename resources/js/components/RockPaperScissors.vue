@@ -87,12 +87,14 @@
       }
     },
     created() {
+      console.log('loaded')
 
     },
     methods: {
 
       // connect and fetch data for live games
       async connectWs() {
+        console.log('clicked')
         try {
 
           this.connection = new WebSocket("ws://bad-api-assignment.reaktor.com/rps/live");
