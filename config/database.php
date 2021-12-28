@@ -2,13 +2,6 @@
 
 use Illuminate\Support\Str;
 
-//$DATABASE_URL = parse_url('postgres://hmqecpcvmjxhjq:e9af617f0bb7c589254fbe3d9f5474ac9c3db50da679bf85bb84791988e839d6@ec2-3-213-76-170.compute-1.amazonaws.com:5432/d3oaob19ke6kr7');
-//mysql://k075gmnmijogx0yl:kxub8a4147s7r1rj@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/qw9w7tk9b7yqze9h
-$url = parse_url("mysql://k075gmnmijogx0yl:kxub8a4147s7r1rj@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/qw9w7tk9b7yqze9h");
-$host = $url["host"] ?? null;
-$username = $url["user"] ?? null;
-$password = $url["pass"] ?? null;
-$database = substr($url["path"], 1);
 return [
 
     /*
@@ -52,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => $url,
-            'host' => $host,
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => $database,
-            'username' => $username,
-            'password' => $password,
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -70,19 +63,6 @@ return [
             ]) : [],
         ],
 
-        // 'pgsql' => [
-        //     'driver' => 'pgsql',
-        //     'host' => $DATABASE_URL['host'],
-        //     'port' => $DATABASE_URL['port'],
-        //     'database' => ltrim($DATABASE_URL['path'],"/"),
-        //     'username' => $DATABASE_URL['user'],
-        //     'password' =>$DATABASE_URL['password'],
-        //     'charset' => 'utf8',
-        //     'prefix' => '',
-        //     'prefix_indexes' => true,
-        //     'schema' => 'public',
-        //     'sslmode' => 'prefer',
-        // ],
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
